@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android  = "http://schemas.android.com/apk/res/android"
+    package        = "com.example.kaylo.funapp" >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <application
+        android:icon   = "@mipmap/ic_launcher"
+        android:label  = "@string/app_name"
+        android:theme  = "@style/AppTheme" >
+        <activity
+            android:name  = ".MainActivity"
+            android:label = "@string/app_name" >
+            <intent-filter>
+                <action android:name   = "android.intent.action.MAIN" />
+                <category android:name = "android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name  = ".NextActivity"
+            android:label = "@string/next_page"
+            android:parentActivityName=".MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.NEXTACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+         </activity>
+
+        <activity
+            android:name  = ".HistoryActivity"
+            android:label = "User History"
+            android:parentActivityName=".NextActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+        <intent-filter>
+            <action android:name="android.intent.action.SEARCHACTIVITY" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name  = ".BookInfoActivity"
+            android:label = "BookInfo"
+            android:parentActivityName=".NextActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCHACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
+
+

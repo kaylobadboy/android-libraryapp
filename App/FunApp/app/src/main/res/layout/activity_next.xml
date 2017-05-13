@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android         = "http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:id="@+id/scrollView"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+
+<RelativeLayout
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation   = "vertical"
+    android:visibility="visible"
+
+    tools:context="com.example.kaylo.funapp.MainActivity"
+
+    android:id="@+id/next">
+
+
+
+
+    <Button
+
+        android:layout_width  = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text          = "@string/log_out"
+        android:id            = "@+id/home"
+        android:enabled="true"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:text="@string/srch"
+        android:id="@+id/search"
+        android:enabled="true"
+        android:visibility="visible"
+        android:layout_gravity="center_horizontal"
+        android:contextClickable="true"
+
+        android:layout_marginTop="190dp"
+        android:layout_below="@+id/tvView"
+        android:layout_centerHorizontal="true"
+        android:onClick="searchPost" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_userinfo"
+        android:id= "@+id/viewuserinfo"
+        android:enabled="true"
+        android:visibility="visible"
+        android:layout_gravity="right"
+        android:layout_below="@+id/home"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width   = "221dp"
+        android:layout_height  = "96dp"
+        android:textAppearance = "?android:attr/textAppearanceLarge"
+        android:id             = "@+id/tvView"
+        android:textStyle      = "bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="69dp"
+        android:layout_below="@+id/home"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bookkeyword"
+        android:singleLine="true"
+
+        android:enabled="true"
+        android:layout_below="@+id/tvView"
+        android:layout_marginTop="155dp"
+        android:layout_alignLeft="@+id/tvView"
+        android:layout_alignStart="@+id/tvView"
+        android:layout_alignRight="@+id/tvView"
+        android:layout_alignEnd="@+id/tvView" />
+
+
+    <Button
+        android:id      = "@+id/add"
+        android:text    = "Purchase"
+        android:onClick = "purchasePost"
+        android:background    = "#3366CC"
+        android:textColor     = "#ffffff"
+        android:layout_width  = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_below="@+id/linearBox"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible">
+    </Button>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/results"
+        android:textStyle="bold"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="314dp"
+        android:layout_below="@+id/tvView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="314dp"
+        android:layout_below="@+id/tvView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/linearBox">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvView"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/purchasetable"></TableLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
+</ScrollView>
